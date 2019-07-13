@@ -1,2 +1,3 @@
-const a = 'Truckpad!'
-console.log(a)
+import app from './App'
+
+app.listen(4002)
