@@ -1,8 +1,8 @@
-import { Response } from 'express-serve-static-core'
-
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
+
+import routes from './routes'
 
 class App {
     public express: express.Application;
@@ -27,9 +27,7 @@ class App {
     }
 
     private routes (): void {
-        this.express.get('/', (req, res): Response => {
-            return res.send('Truckpad!')
-        })
+        this.express.use(routes)
     }
 }
 

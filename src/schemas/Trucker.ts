@@ -1,4 +1,6 @@
-import { Schema } from 'mongoose'
+import { Schema, model } from 'mongoose'
+
+import TruckerInterface from './TruckerInterface'
 
 const TruckerSchema = new Schema({
     name: String,
@@ -33,3 +35,5 @@ const TruckerSchema = new Schema({
 }, {
     timestamps: true
 })
+
+export default model<TruckerInterface>('Trucker', TruckerSchema)
