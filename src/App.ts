@@ -21,9 +21,10 @@ class App {
     }
 
     private database (): void {
-        mongoose.connect('mongodb://localhost:27017/truckpad', {
-            useNewUrlParser: true
-        })
+        mongoose.connect(
+            process.env.MONGO_URL,
+            { useNewUrlParser: true }
+        )
     }
 
     private routes (): void {
