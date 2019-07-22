@@ -22,7 +22,8 @@ class App {
     private middlewares (): void {
         this.express.use(express.json())
         this.express.use(cors({
-            origin: ['https://truckpad-app.herokuapp.com/', 'http://localhost:3000']
+            credentials: true,
+            origin: ['https://truckpad-app.herokuapp.com', 'http://localhost:3000']
         }))
     }
 
