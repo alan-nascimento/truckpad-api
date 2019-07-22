@@ -4,6 +4,7 @@ import TruckerInterface from './TruckerInterface'
 
 const TruckerSchema = new Schema({
     name: String,
+    phone: Number,
     birthDate: Date,
     state: String,
     city: String,

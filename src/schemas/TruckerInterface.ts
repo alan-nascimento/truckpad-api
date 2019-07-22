@@ -2,6 +2,7 @@ import { Document } from 'mongoose'
 
 export default interface TruckerInterface extends Document {
     name: string;
+    phone: number;
     birthDate: Date;
     state: string;
     city: string;
